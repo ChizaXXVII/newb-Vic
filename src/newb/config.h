@@ -155,9 +155,9 @@
 //#define NL_AURORA_COL2 vec3(0.1,0.0,1.0)
 
 /* Shooting star */
-//#define NL_SHOOTING_STAR 1.0        // [toggle] 0.2 dim ~ 1.0 bright
-//#define NL_SHOOTING_STAR_PERIOD 6.0 // 0.4 fast ~ 12.0 slow (12 secs)
-//#define NL_SHOOTING_STAR_DELAY 64.0 // 0.0 no delay ~ 100.0 long time (100 secs)
+#define NL_SHOOTING_STAR 0.0        // [toggle] 0.2 dim ~ 1.0 bright
+#define NL_SHOOTING_STAR_PERIOD 0.0 // 0.4 fast ~ 12.0 slow (12 secs)
+#define NL_SHOOTING_STAR_DELAY 0.0 // 0.0 no delay ~ 100.0 long time (100 secs)
 
 /* Galaxy */
 #define NL_GALAXY_STARS 4.0           // [toggle] 0.1 dim - 4.0 bright
