@@ -64,7 +64,7 @@
 #define NL_FOG 1.0                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
 #define NL_MIST_DENSITY 0.75      // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.35 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
-#define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
+//#define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky colors - zenith=top, horizon=bottom */
 #define NL_DAY_ZENITH_COL    vec3(0.15,0.45,1.0)
@@ -96,30 +96,30 @@
 //#define NL_EXTRA_PLANTS_WAVE // [toggle] !dont use! wave using texture coords (1.21.0 vanilla 2048x1024)
 
 /* Water */
-#define NL_WATER_TRANSPARENCY 0.9 // 0.0 transparent ~ 1.0 normal
-#define NL_WATER_BUMP 0.1        // 0.001 plain ~ 0.2 bumpy water
-#define NL_WATER_WAVE_SPEED  0.1  // 0.2 calm ~ 2.0 turbulent
-#define NL_WATER_TEX_OPACITY 0.85  // 0.0 plain water ~ 1.0 vanilla water texture
+#define NL_WATER_TRANSPARENCY 0.95 // 0.0 transparent ~ 1.0 normal
+#define NL_WATER_BUMP 0.005        // 0.001 plain ~ 0.2 bumpy water
+#define NL_WATER_WAVE_SPEED  0.5  // 0.2 calm ~ 2.0 turbulent
+#define NL_WATER_TEX_OPACITY 0.99  // 0.0 plain water ~ 1.0 vanilla water texture
 #define NL_WATER_WAVE             // [toggle] wave effect
 //#define NL_WATER_CLOUD_REFLECTION // [toggle] simple clouds/aurora reflection
 //#define NL_WATER_REFL_MASK      // [toggle] fake water reflection mask
 #define NL_WATER_TINT vec3(0.52,0.9,0.45)
 
 /* Underwater */
-#define NL_UNDERWATER_BRIGHTNESS 0.8         // 0.0 dark ~ 3.0 bright
+#define NL_UNDERWATER_BRIGHTNESS 1.0.         // 0.0 dark ~ 3.0 bright
 #define NL_CAUSTIC_INTENSITY 2.0             // 0.5 weak ~ 5.0 bright
-#define NL_UNDERWATER_WAVE 0.0               // [toggle] 0.02 subtle ~ 0.6 trippy
+#define NL_UNDERWATER_WAVE 0.02               // [toggle] 0.02 subtle ~ 0.6 trippy
 #define NL_UNDERWATER_STREAKS 1.5            // [toggle] 0.8 subtle - 2.0 bright streaks from top
 #define NL_UNDERWATER_TINT vec3(0.9,1.0,0.9) // fog tint color when underwater
 
 /* Cloud type */
-#define NL_CLOUD_TYPE 1 // 0:vanilla, 1:soft, 2:rounded
+#define NL_CLOUD_TYPE 0 // 0:vanilla, 1:soft, 2:rounded
 
 /* Vanilla cloud settings - make sure to remove clouds.png when using this */
-#define NL_CLOUD0_THICKNESS 2.1      // 0.5 slim ~ 8.0 fat
-#define NL_CLOUD0_RAIN_THICKNESS 4.0 // 0.5 slim ~ 8.0 fat
-#define NL_CLOUD0_OPACITY 0.9        // 0.0 invisible ~ 1.0 opaque
-#define NL_CLOUD0_MULTILAYER         // [toggle] extra cloud layer
+#define NL_CLOUD0_THICKNESS 4.0      // 0.5 slim ~ 8.0 fat
+#define NL_CLOUD0_RAIN_THICKNESS 8.0 // 0.5 slim ~ 8.0 fat
+#define NL_CLOUD0_OPACITY 1.0        // 0.0 invisible ~ 1.0 opaque
+//#define NL_CLOUD0_MULTILAYER         // [toggle] extra cloud layer
 
 /* Soft cloud settings */
 #define NL_CLOUD1_SCALE vec2(0.016, 0.022) // 0.003 large ~ 0.2 tiny
@@ -160,9 +160,9 @@
 #define NL_SHOOTING_STAR_DELAY 0.0 // 0.0 no delay ~ 100.0 long time (100 secs)
 
 /* Galaxy */
-#define NL_GALAXY_STARS 4.0           // [toggle] 0.1 dim - 4.0 bright
-#define NL_GALAXY_VIBRANCE 0.7          // 0.0 white - 1.0 colorful
-#define NL_GALAXY_SPEED 0.02            // 0.01 slow motion - 0.2 fast motion
+#define NL_GALAXY_STARS 2.0           // [toggle] 0.1 dim - 4.0 bright
+#define NL_GALAXY_VIBRANCE 0.0         // 0.0 white - 1.0 colorful
+#define NL_GALAXY_SPEED 0.01           // 0.01 slow motion - 0.2 fast motion
 #define NL_GALAXY_DAY_VISIBILITY 0.5    // 0.0 invisible - 1.0 visible
 
 /* Chunk loading slide in animation */
@@ -173,7 +173,7 @@
 #define NL_SUNMOON_SIZE 1.9     // 0.3 tiny ~ 4.0 massive
 
 /* Fake godrays during sunrise/sunset */
-#define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
+#define NL_GODRAY 0.6 // [toggle] 0.1 subtle ~ 0.8 strong
 
 /* Sky reflection */
 //#define NL_GROUND_REFL 0.4       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky 
