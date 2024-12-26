@@ -64,7 +64,7 @@
 #define NL_FOG 1.0                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
 #define NL_MIST_DENSITY 0.75      // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.35 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
-//#define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
+#define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky colors - zenith=top, horizon=bottom */
 #define NL_DAY_ZENITH_COL    vec3(0.15,0.45,1.0)
@@ -162,8 +162,8 @@
 /* Galaxy */
 //#define NL_GALAXY_STARS 0.0           // [toggle] 0.1 dim - 4.0 bright
 //#define NL_GALAXY_VIBRANCE 0.0         // 0.0 white - 1.0 colorful
-#define NL_GALAXY_SPEED 0.0           // 0.01 slow motion - 0.2 fast motion
-#define NL_GALAXY_DAY_VISIBILITY 0.0    // 0.0 invisible - 1.0 visible
+//#define NL_GALAXY_SPEED 0.0           // 0.01 slow motion - 0.2 fast motion
+//#define NL_GALAXY_DAY_VISIBILITY 0.0    // 0.0 invisible - 1.0 visible
 
 /* Chunk loading slide in animation */
 //#define NL_CHUNK_LOAD_ANIM 100.0 // [toggle] -600.0 fall from top ~ 600.0 rise from bottom
