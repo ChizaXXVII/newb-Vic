@@ -64,7 +64,7 @@
 #define NL_FOG 1.0                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
 #define NL_MIST_DENSITY 0.75      // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.35 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
-#define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
+//#define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky colors - zenith=top, horizon=bottom */
 #define NL_DAY_ZENITH_COL    vec3(0.15,0.45,1.0)
@@ -106,7 +106,7 @@
 #define NL_WATER_TINT vec3(0.52,0.9,0.45)
 
 /* Underwater */
-#define NL_UNDERWATER_BRIGHTNESS 1.0.         // 0.0 dark ~ 3.0 bright
+#define NL_UNDERWATER_BRIGHTNESS 1.0         // 0.0 dark ~ 3.0 bright
 #define NL_CAUSTIC_INTENSITY 2.0             // 0.5 weak ~ 5.0 bright
 #define NL_UNDERWATER_WAVE 0.02               // [toggle] 0.02 subtle ~ 0.6 trippy
 #define NL_UNDERWATER_STREAKS 1.5            // [toggle] 0.8 subtle - 2.0 bright streaks from top
