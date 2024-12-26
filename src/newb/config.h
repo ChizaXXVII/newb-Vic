@@ -160,10 +160,10 @@
 #define NL_SHOOTING_STAR_DELAY 0.0 // 0.0 no delay ~ 100.0 long time (100 secs)
 
 /* Galaxy */
-//#define NL_GALAXY_STARS 2.0           // [toggle] 0.1 dim - 4.0 bright
+//#define NL_GALAXY_STARS 0.0           // [toggle] 0.1 dim - 4.0 bright
 //#define NL_GALAXY_VIBRANCE 0.0         // 0.0 white - 1.0 colorful
-//#define NL_GALAXY_SPEED 0.01           // 0.01 slow motion - 0.2 fast motion
-//#define NL_GALAXY_DAY_VISIBILITY 0.1    // 0.0 invisible - 1.0 visible
+#define NL_GALAXY_SPEED 0.0           // 0.01 slow motion - 0.2 fast motion
+#define NL_GALAXY_DAY_VISIBILITY 0.0    // 0.0 invisible - 1.0 visible
 
 /* Chunk loading slide in animation */
 //#define NL_CHUNK_LOAD_ANIM 100.0 // [toggle] -600.0 fall from top ~ 600.0 rise from bottom
@@ -173,7 +173,7 @@
 #define NL_SUNMOON_SIZE 1.9     // 0.3 tiny ~ 4.0 massive
 
 /* Fake godrays during sunrise/sunset */
-#define NL_GODRAY 0.6 // [toggle] 0.1 subtle ~ 0.8 strong
+//#define NL_GODRAY 0.6 // [toggle] 0.1 subtle ~ 0.8 strong
 
 /* Sky reflection */
 //#define NL_GROUND_REFL 0.4       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky 
