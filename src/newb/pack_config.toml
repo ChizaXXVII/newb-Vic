@@ -1,16 +1,16 @@
-name = "Newb V.I.C"
-version = [0, 1, 0]
+name = "§l§9Newb §5X §l§dGalaxy"
+version = [0, 16, 0]
 min_supported_mc_version = [1, 21, 20]
 description = '''
 §c%w
-§7- An enchanced vanilla shader for Minecraft!
+§7- The first shader with a galaxy in the End!
 %v
 §3https://devendrn.github.io/newb-shader/
 ''' # %w = patch warning, %v = version
-authors = ["xXchizaXx", "devendrn"]
+authors = ["devendrn","stellar"]
 url = "https://devendrn.github.io/newb-shader/"
-uuid = "95f774cf-4afa-73e7-a21a-72146307b1d2" # Use https://www.uuidgenerator.net/version4
-materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
+uuid = "6a5e45ec-ce43-4e79-8d0c-ee6a58c6ec09" # Use https://www.uuidgenerator.net/version4
+materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "LegacyCubemap", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
 [info] 
 copyright = '''
@@ -29,8 +29,79 @@ credits = '''
 # right-most subpack is enabled by default
 
 [[subpack]]
+define = "MINERALS_WITH_EDGES"
+materials = ["RenderChunk"]
+description = '''
+edges in the bright ores 
+'''
+
+[[subpack]]
+define = "BRILLIANT_NORMAL_MINERALS"
+materials = ["RenderChunk"]
+description = '''
+shiny vanilla minecraft flowers 
+'''
+
+[[subpack]]
+define = "GALAXIA_END"
+materials = ["RenderChunk"]
+description = '''
+a galaxy at the end 
+'''
+
+[[subpack]]
+define = "GROUND_REFL"
+materials = ["RenderChunk"]
+description = '''
+reflection of the sky 
+'''
+
+[[subpack]]
+define = "complementary_clouds"
+materials = ["Clouds"]
+description = '''
+complementary clouds
+'''
+
+[[subpack]]
+define = "VANILLA_CLOUDS"
+materials = ["Clouds", "RenderChunk"]
+description = '''
+vanilla Clouds
+'''
+
+[[subpack]]
+define = "CHUNK_ANIM"
+materials = ["RenderChunk"]
+description = '''
+Chunk loading animation
+'''
+
+[[subpack]]
+define = "NO_WAVE_NO_FOG"
+materials = ["RenderChunk"]
+description = '''
+No fog and wave effects
+'''
+
+[[subpack]]
+define = "NO_FOG"
+materials = ["RenderChunk"]
+description = '''
+No fog effect
+'''
+
+[[subpack]]
+define = "NO_WAVE"
+materials = ["RenderChunk"]
+description = '''
+No wave effects
+'''
+
+[[subpack]]
 define = "DEFAULT"
 materials = []
 description = '''
 Default
 '''
+
