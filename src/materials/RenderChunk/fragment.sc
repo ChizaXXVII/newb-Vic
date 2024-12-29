@@ -7,41 +7,6 @@ SAMPLER2D_AUTOREG(s_MatTexture);
 SAMPLER2D_AUTOREG(s_SeasonsTexture);
 SAMPLER2D_AUTOREG(s_LightMapTexture);
 
-uniform sampler2D depthtex0;
-uniform mat4 gbufferProjectionInverse;
-uniform vec3 upVec;
-uniform vec3 sunVec;
-uniform float view;
-uniform float far;
-
-const vec2 darkOutlineOffsets[12] = vec2[12](
-    vec2( 1.0, 0.0), vec2(-1.0, 1.0), vec2( 0.0, 1.0), vec2( 1.0, 1.0),
-    vec2(-2.0, 2.0), vec2(-1.0, 2.0), vec2( 0.0, 2.0), vec2( 1.0, 2.0),
-    vec2( 2.0, 2.0), vec2(-2.0, 1.0), vec2( 2.0, 1.0), vec2( 2.0, 0.0)
-);
-
-float GetLinearDepth(float depth) {
-    return depth * far;
-}
-
-void DoDarkOutline(inout vec3 color, float depth, vec2 uv) {
-    vec2 scale = vec2(1.0 / view);
-
-    float outline = 1.0;
-    float z = GetLinearDepth(depth) * far * 2.0;
-
-    for (int i = 0; i < 12; i++) {
-        vec2 offset = scale * darkOutlineOffsets[i];
-        float sampleZA = texture2D(depthtex0, uv + offset).r;
-        float sampleZB = texture2D(depthtex0, uv - offset).r;
-
-        float sampleZsum = GetLinearDepth(sampleZA) + GetLinearDepth(sampleZB);
-        outline *= clamp(1.0 - (z - sampleZsum * far), 0.0, 1.0);
-    }
-
-    color = mix(color, vec3(0.0), 1.0 - outline);
-}
-
 void main() {
   #if defined(DEPTH_ONLY_OPAQUE) || defined(DEPTH_ONLY) || defined(INSTANCING)
     gl_FragColor = vec4(1.0,1.0,1.0,1.0);
@@ -97,10 +62,6 @@ void main() {
   diffuse.rgb = mix(diffuse.rgb, v_fog.rgb, v_fog.a);
 
   diffuse.rgb = colorCorrection(diffuse.rgb);
-
-  // Apply dark outline effect
-  float depth = texture2D(depthtex0, v_texcoord0).r;
-  DoDarkOutline(diffuse.rgb, depth, v_texcoord0);
 
   gl_FragColor = diffuse;
 }
